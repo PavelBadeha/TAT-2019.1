@@ -9,10 +9,10 @@ namespace DEV_1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < args.Length; i++)          //Провека на правильность ввода 
+            for (int i = 0; i < args.Length; i++)          
             {
                 string slovo = args[i];
-                if (slovo.Length < 2)
+                if (slovo.Length < 2)                //Провека на правильность ввода 
                 {
                     Console.WriteLine("Empty or less than 2 symbols");
                 }
@@ -40,7 +40,7 @@ namespace DEV_1
                 {
                     flag = true;
                 }
-                if (flag || ( i == slovo.Length - 1))  //Вычлинение из подстроки все возможные подстроки 
+                if (flag || (i == slovo.Length - 1))  //Вычлинение из подстроки все возможные подстроки 
                     while (buff.Length >= 2)                   //Более 2-ух символов 
                     {
                         for (int k = 0; k < buff.Length; k++)
