@@ -9,7 +9,7 @@ namespace DEV_1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < args.Length; i++)          
+            for (int i = 0; i < args.Length; i++)
             {
                 string slovo = args[i];
                 if (slovo.Length < 2)                //Провека на правильность ввода 
@@ -59,5 +59,3 @@ namespace DEV_1
         }
     }
 }
-
-
