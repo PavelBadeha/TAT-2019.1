@@ -3,14 +3,14 @@ using System.Text;
 
 namespace DEV_1
 {
-    public class FinderUniqueSubString 
+    public class FinderUniqueSubString
     {
         /// <summary>
         /// <param name="str"></param> string that is subject to change
         /// <param name="BuffResultSting"></param>buffer StringBuilder that will be contain all unique subsequences
         /// <param name="ResultString"></param> Result string which contain all unique subsequences
         /// </summary>
-       
+
         private string str = string.Empty;
         private StringBuilder BuffResultString = new StringBuilder(string.Empty);
         private string ResultString = string.Empty;
@@ -36,21 +36,21 @@ namespace DEV_1
             {
                 if (str[i] != str[i - 1])
                 {
-                    buff += str[i];             
+                    buff += str[i];
                 }
                 else
                 {
                     flag = true;
                 }
-                if (flag || (i == str.Length - 1))  
-                    while (buff.Length >= 2)                  
+                if (flag || (i == str.Length - 1))
+                    while (buff.Length >= 2)
                     {
                         for (int k = 0; k < buff.Length; k++)
                         {
                             buff2 += buff[k];
                             if (buff2.Length >= 2)
                             {
-                               BuffResultString.Append($"{buff2}\n");
+                                BuffResultString.Append($"{buff2}\n");
                             }
                         }
                         buff = buff.TrimStart(buff[0]);

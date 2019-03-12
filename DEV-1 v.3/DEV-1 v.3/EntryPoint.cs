@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
+
 namespace DEV_1
 {
     class EntryPoint
     {
         static void Main(string[] args)
         {
-            int ErrorIndex = 0;//Index of the word from the command line where the error occurred
+
+            ///<summary>
+            ///<param name="ErrorIndex"></param>Index of the word from the command line where the error occurred
+            ///</summary>
+
+            int ErrorIndex = 0;
+
             try
             {
                 if (args.Length == 0)
@@ -31,15 +35,19 @@ namespace DEV_1
                 }
 
             }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("Empty string");
+            }
             catch (FormatException)
             {
                 Console.WriteLine($"Word caused format exception: {args[ErrorIndex]}");
                 Console.WriteLine("Less than 2 symbols");
             }
-            catch (ArgumentNullException)
+            catch (Exception)
             {
-                Console.WriteLine("Empty string");
+                Console.WriteLine("Unknown error");
             }
-        }   
+        }
     }
 }
