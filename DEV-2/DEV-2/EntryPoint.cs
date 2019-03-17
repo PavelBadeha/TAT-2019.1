@@ -14,20 +14,8 @@ namespace DEV_2
                 {
                     throw new ArgumentNullException();
                 }
-
-                for (int i = 0; i < str.Length; i++)          //Validation check
-                {
-                    if (str[i] == '+' || str[i] == 'ё')
-                    {                      
-                        break;
-                    }
-                    if (i + 1 == str.Length)
-                    {
-                        throw new FormatException();
-                    }
-                }
-
                 var obj = new MakeTranscription(str);
+                obj.ValidationCheck();
                 obj.Transcriptor();
                 obj.DisplayResult();
 

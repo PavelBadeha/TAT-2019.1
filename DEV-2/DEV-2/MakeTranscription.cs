@@ -33,6 +33,28 @@ namespace DEV_2
             str = _str;
         }
 
+        public void ValidationCheck()          //Validation check
+        {
+            int CounterVowels = 0;
+            for (int i = 0; i < str.Length; i++)         
+            {
+               
+                if (Vowel.Contains(str[i]))
+                {
+                    CounterVowels++;
+                }
+                if (str[i] == '+' || str[i] == 'ё')
+                {
+                    break;
+                }              
+                if (i + 1 == str.Length && CounterVowels > 1)
+                {
+                    throw new FormatException();
+                }
+            }
+            
+
+        }
         /// <summary>
         /// StressedLetter unstressed 'о' goes into 'a'
         /// </summary>
