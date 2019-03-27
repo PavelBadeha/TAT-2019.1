@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Discipline.cs" />
-    <Compile Include="ICloneable2.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Lab.cs" />
     <Compile Include="Lection.cs" />

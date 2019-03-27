@@ -27,6 +27,14 @@ namespace DEV_4
         }
 
         /// <summary>
+        /// Constructor of discipline with params
+        /// </summary>
+        public Discipline(string TextDescription,Materials materials)
+        {
+            this.TextDescription = TextDescription;
+            this.materials = materials;
+        }
+        /// <summary>
         ///override method ToString() for  Discipline
         /// </summary>
         /// <returns></returns>
@@ -81,7 +89,7 @@ namespace DEV_4
         /// <returns disciplineClone></returns>
         public object Clone()
         {
-            Discipline disciplineClone = new Discipline();
+            Discipline disciplineClone = new Discipline(this.TextDescription,this.materials);
             return disciplineClone;
         }
     }
