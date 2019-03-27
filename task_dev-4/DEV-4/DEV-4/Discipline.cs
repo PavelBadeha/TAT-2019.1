@@ -34,6 +34,7 @@ namespace DEV_4
             this.TextDescription = TextDescription;
             this.materials = materials;
         }
+
         /// <summary>
         ///override method ToString() for  Discipline
         /// </summary>
