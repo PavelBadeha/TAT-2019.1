@@ -2,12 +2,15 @@
 
 namespace DEV_3
 {
-    class TeamBuild2ndCriterion:TeamBuild
+    /// <summary>
+    /// Class of second criterion
+    ///Second criterion is minimum cost with fixed productivity
+    /// </summary>
+    class TeamBuild2ndCriterion :TeamBuild
     {
-        /// <summary>
-        /// Class of second criterion
-        ///Second criterion is minimum cost with fixed productivity
-        /// </summary>
+      /// <summary>
+      /// the constructor of class
+      /// </summary>
         public TeamBuild2ndCriterion()
         {
             Console.WriteLine("Input productivity");
@@ -37,7 +40,6 @@ namespace DEV_3
             }
             while (NeedProductivity >= senior.Productivity)
             {
-
                 i++;
                 urTeam.Add(new Senior());
                 urTeamSeniors++;
@@ -48,11 +50,9 @@ namespace DEV_3
                     i = 0;
                     break;
                 }
-
             }
             while (NeedProductivity >= middle.Productivity)
             {
-
                 i++;
                 urTeam.Add(new Middle());
                 urTeamMiddles++;
@@ -72,7 +72,7 @@ namespace DEV_3
                 urTeamJuniors++;
                 Price += junior.Cost;
                 NeedProductivity -= junior.Productivity;
-                             
+                
                 if (i == juniorCounter)
                 {
                     i = 0;

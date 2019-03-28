@@ -3,10 +3,12 @@ using System.Collections.Generic;
 
 namespace DEV_3
 {
+    /// <summary>
+    /// Class that contain info about Company
+    /// </summary>
     class Company
     {
         /// <summary>
-        /// Class that contain info about Company
         ///<param name="leadCounter">quantity of leads</param>
         ///<param name="seniorCounter">quantity of seniors</param>
         ///<param name="middleCounter">quantity of middles</param>

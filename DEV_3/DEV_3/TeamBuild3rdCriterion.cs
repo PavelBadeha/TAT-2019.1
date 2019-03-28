@@ -2,11 +2,14 @@
 
 namespace DEV_3
 {
-    class TeamBuild3rdCriterion:TeamBuild
+    /// <summary>
+    /// Class of third criterion
+    ///Third criterion minimum number of staff qualifications above Junior for fixed productivity
+    /// </summary>
+    class TeamBuild3rdCriterion :TeamBuild
     {
         /// <summary>
-        /// Class of third criterion
-        ///Third criterion minimum number of staff qualifications above Junior for fixed productivity
+        /// the constructor of class
         /// </summary>
         public TeamBuild3rdCriterion()
         {
@@ -37,7 +40,6 @@ namespace DEV_3
             }
             while (NeedProductivity >= senior.Productivity)
             {
-
                 i++;
                 urTeam.Add(new Senior());
                 urTeamSeniors++;
@@ -48,11 +50,9 @@ namespace DEV_3
                     i = 0;
                     break;
                 }
-
             }
             while (NeedProductivity >= middle.Productivity)
             {
-
                 i++;
                 urTeam.Add(new Middle());
                 urTeamMiddles++;

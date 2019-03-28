@@ -8,6 +8,9 @@ namespace DEV_3
     /// </summary>
     class TeamBuild1stCriterion :TeamBuild
     {
+        /// <summary>
+        /// the constructor of class
+        /// </summary>
         public TeamBuild1stCriterion()
         {        
             Console.WriteLine("Input amount");
@@ -23,10 +26,10 @@ namespace DEV_3
         {
             int i = 0;
             while (Amount>=lead.Cost)
-            {       
-                    i++;
-                    urTeam.Add(new Lead());
-                    Amount -= lead.Cost;
+            {
+                i++;
+                urTeam.Add(new Lead());
+                Amount -= lead.Cost;
                 TotalProductivity += lead.Productivity;
                 urTeamLeads++;
                 if(i==leadCounter)
@@ -36,8 +39,7 @@ namespace DEV_3
                 }
             }
             while (Amount >= senior.Cost)
-            {
-               
+            {             
                 i++;
                 urTeam.Add(new Senior());
                 Amount -= senior.Cost;
@@ -48,11 +50,9 @@ namespace DEV_3
                     i = 0;
                     break;
                 }
-
             }
             while (Amount >= middle.Cost)
-            {
-             
+            {            
                 i++;               
                 urTeam.Add(new Middle());
                 urTeamMiddles++;
@@ -65,8 +65,7 @@ namespace DEV_3
                 }
             }
             while (Amount >= junior.Cost)
-            {
-            
+            {           
                 i++;
                 urTeam.Add(new Junior());
                 urTeamJuniors++;

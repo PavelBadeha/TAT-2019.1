@@ -1,8 +1,15 @@
 ﻿using System;
 namespace DEV_3
 {
+    /// <summary>
+    /// Entry point of program.
+    /// </summary>
     class EntryPoint
     {
+        /// <summary>
+        /// The main method
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             try

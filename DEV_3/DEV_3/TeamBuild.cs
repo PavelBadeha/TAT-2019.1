@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace DEV_3
 {
+    /// <summary>
+    /// Class that create team for customer
+    /// </summary>
     class TeamBuild:Company
     {
         /// <summary>
@@ -25,12 +28,16 @@ namespace DEV_3
         protected int urTeamSeniors = 0;
         protected int urTeamMiddles = 0;
         protected int urTeamJuniors = 0;
+
         //objects of Lead,Senior,Middle,Junior
         protected Lead lead;
         protected Senior senior;
         protected Middle middle;
         protected Junior junior;
          
+        /// <summary>
+        /// the constructor that create object of Employees
+        /// </summary>
         public TeamBuild()
         {
             junior = new Junior();
@@ -39,10 +46,12 @@ namespace DEV_3
             lead = new Lead();
             urTeam = new List<Employee>();
         }
+
         /// <summary>
         /// a method that considers how much and who needs the customer
         /// </summary>
         public virtual void Colculate() { }
+
         /// <summary>
         /// display team for a customer
         /// </summary>
