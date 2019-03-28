@@ -14,7 +14,7 @@ namespace DEV_4
         private static List<string> Guids = new List<string>();
 
         /// <summary>
-        /// static method thath generate and return unique identifiers
+        /// static method that generate and return unique identifiers
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>

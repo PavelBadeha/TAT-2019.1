@@ -20,7 +20,7 @@ namespace DEV_4
         private List<string> answers;
        
         /// <summary>
-        /// Construcr of Seminar
+        /// Constructor of Seminar
         /// </summary>
         public Seminar()
         {

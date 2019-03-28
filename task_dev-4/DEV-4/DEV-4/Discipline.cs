@@ -36,7 +36,7 @@ namespace DEV_4
         }
 
         /// <summary>
-        ///override method ToString() for  Discipline
+        ///override method ToString() for Discipline
         /// </summary>
         /// <returns></returns>
         public override string ToString()

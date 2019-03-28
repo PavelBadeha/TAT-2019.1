@@ -5,7 +5,7 @@ using System.Text;
 namespace DEV_4
 {
     /// <summary>
-    /// Class thath creates seminar,lab for lection
+    /// Class that creates seminar,lab for lection
     /// </summary>
     class Lection :Materials
     {
@@ -23,11 +23,10 @@ namespace DEV_4
         List<Seminar> seminars;
 
         /// <summary>
-        /// Construct of Lection
+        /// Constructor of Lection
         /// </summary>
         public Lection()
         {
-
             labs = new List<Lab>();
             seminars = new List<Seminar>();
             presentation = new Presentation();
@@ -40,7 +39,7 @@ namespace DEV_4
         } 
         
         /// <summary>
-        /// Method that Inform u about lection
+        /// Method that inform u about lection
         /// </summary>
         /// <returns></returns>
         public string Inform()

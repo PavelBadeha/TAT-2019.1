@@ -3,7 +3,7 @@
 namespace DEV_4
 { 
     /// <summary>
-    /// Class creates lection for the Materials
+    /// Class that creates lection for the materials
     /// </summary>
     class Materials :Discipline
     {

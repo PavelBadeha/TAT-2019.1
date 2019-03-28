@@ -3,7 +3,7 @@
 namespace DEV_4
 {
     /// <summary>
-    /// Class thath conatin URI adn Format of presentation
+    /// Class that conatin URI adn Format of presentation
     /// </summary>
     class Presentation : Materials
     {
@@ -17,7 +17,7 @@ namespace DEV_4
         private string[] ExistingFormats = new string[] { "Unknow", "PDF", "PPT" };
 
         /// <summary>
-        /// Construct if Presentation
+        /// Constructor of Presentation
         /// </summary>
         public Presentation()
         {
@@ -26,7 +26,7 @@ namespace DEV_4
         }
 
         /// <summary>
-        /// Construct if Presentation with param
+        /// Constructor of Presentation with param
         /// </summary>
         /// <param name="Format">name of Format</param>
         public Presentation(string Format)
