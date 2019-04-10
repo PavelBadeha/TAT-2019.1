@@ -1,24 +1,21 @@
-﻿using System.Xml;
-using System;
+﻿
 namespace DEV_6
 {
     class CommandCountTypes: Command
     {
-        public CommandCountTypes(string nameOfXml):base(nameOfXml)
+        private int CountOfTypes;
+        public CommandCountTypes(Company company):base(company)
         {
-
+            CountOfTypes = 0;
         }
-        public override void Execute()
+        public override double Execute()
         {
-            int Count = 0;
-            foreach (XmlNode xnode in xmlElement)
+            foreach(var el in company.allMarks)
             {
-                if (xnode.Attributes.Count > 0)
-                {
-                    Count++;
-                }
+                CountOfTypes++;
             }
-             Console.WriteLine($"Count of types:{Count}");
-        }
+            return CountOfTypes;
+        }      
+
     }
 }

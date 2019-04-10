@@ -49,10 +49,10 @@
     <Compile Include="CommandAveragePrice.cs" />
     <Compile Include="CommandAveragePriceType.cs" />
     <Compile Include="CommandCountAll.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="ICommand.cs" />
+    <Compile Include="Invoker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,29 +1,12 @@
-﻿using System.Xml;
-using System.Collections.Generic;
-
-namespace DEV_6
+﻿namespace DEV_6
 {
-   abstract class Command: ICommand
+   abstract class Command
     {
-        public abstract void Execute();
-        public string nameOfXml { get; protected set; }
-        protected XmlDocument xmlDocument;
-        protected XmlElement xmlElement;
-        protected List<string> allMarks= new List<string>();
-        public Command(string nameOfXml)
+        protected Company company;
+        public abstract double Execute();      
+        public Command(Company company)
         {
-            this.nameOfXml = nameOfXml;
-            xmlDocument = new XmlDocument();
-            xmlDocument.Load(nameOfXml);
-            xmlElement = xmlDocument.DocumentElement;
-            AddMarksToList();          
-        }
-        public void AddMarksToList()
-        {
-            foreach (XmlElement xnode in xmlElement)
-            {
-               allMarks.Add(xnode.Attributes.GetNamedItem("Mark")?.Value);                
-            }
-        }
+            this.company = company; 
+        }        
     }
 }

@@ -8,27 +8,18 @@ namespace DEV_6
 {
     class CommandCountAll: Command
     {
-        public CommandCountAll(string nameOfXml) : base(nameOfXml)
+        private int QuantityOfAll;
+        public CommandCountAll(Company company) : base(company)
         {
-
+            QuantityOfAll = 0;
         }
-        public override void Execute()
+        public override double Execute()
         {
-            int QuantityOfAll = 0;
-            foreach (XmlNode xnode in xmlElement)
-            {              
-                foreach (XmlNode childnode in xnode)
-                {
-                    foreach(XmlNode attribute in childnode)
-                    {
-                        if (attribute.Name == "Quantity")
-                        {
-                            QuantityOfAll += Int32.Parse(attribute.InnerText);
-                        }
-                    }                                   
-                }
+            foreach(var element in company.cars)
+            {
+                QuantityOfAll += element.Quantity;
             }
-            Console.WriteLine($"QuantityOfAll: {QuantityOfAll}");
+            return QuantityOfAll;
         }
     }
 }

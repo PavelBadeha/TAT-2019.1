@@ -1,32 +1,23 @@
-﻿using System;
-using System.Xml;
-
+﻿
 namespace DEV_6
 {
     class CommandAveragePrice : Command
     {
-        public CommandAveragePrice(string nameOfXml) : base(nameOfXml)
+        private int countOfAllCars;
+        private double allPrice;
+        public CommandAveragePrice(Company company) : base(company)
         {
+            countOfAllCars = 0;
+            allPrice = 0;
         }
-        public override void Execute()
+        public override double Execute()
         {
-            int AllPrice = 0;
-            int Count = 0;
-            foreach (XmlNode xnode in xmlElement)
-            {               
-                foreach (XmlNode childnode in xnode)
-                {
-                    Count++;
-                    foreach (XmlNode node in childnode )
-                    {
-                        if (node.Name == "Price")
-                        {
-                            AllPrice += Int32.Parse(node.InnerText);
-                        }
-                    }                 
-                }
+           foreach(var element in company.cars)
+            {                         
+                allPrice += element.Price*element.Quantity;
+                countOfAllCars += element.Quantity;
             }
-            Console.WriteLine($"Average price : {AllPrice/Count}");
+            return allPrice/countOfAllCars;
         }
     }
 }

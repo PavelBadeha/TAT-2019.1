@@ -5,48 +5,26 @@ namespace DEV_6
 {
     class CommandAveragePriceType: Command
     {
+        private double allPrice;
+        private int countOfCars;
         private string Type = string.Empty;
-        public CommandAveragePriceType(string nameOfXml,string Type) : base(nameOfXml)
+        public CommandAveragePriceType(Company company,string Type) : base(company)
         {
             this.Type = Type;
-            checkForValid();
+            allPrice = 0;
+            countOfCars = 0;        
         }
-        public void checkForValid()
+        public override double Execute()
         {
-            if(!allMarks.Contains(Type))
+          foreach(var element in company.cars)
             {
-                Console.WriteLine("!!!!Not correct Mark!!!!\nMarks that we have");
-                foreach(var type in allMarks)
+                if(element.Mark.Equals(Type))
                 {
-                    Console.WriteLine(type);
+                    allPrice += element.Price*element.Quantity;
+                    countOfCars+=element.Quantity;
                 }
-                Console.WriteLine("Input new Mark");
-                Type = Console.ReadLine();
-                checkForValid();
             }
-        }
-        public override void Execute()
-        {
-            int AllPrice = 0;
-            int Count = 0;
-            foreach (XmlNode xnode in xmlElement)
-            {                      
-                if (xnode.Attributes.GetNamedItem("Mark").Value==Type)
-                {                   
-                    foreach (XmlNode childnode in xnode)
-                    {
-                        Count++;
-                        foreach (XmlNode node in childnode)
-                        {
-                            if (node.Name == "Price")
-                            {
-                                AllPrice += Int32.Parse(node.InnerText);
-                            }
-                        }
-                    }
-                }              
-            }
-            Console.WriteLine($"Average price : {AllPrice / Count}");
+            return allPrice / countOfCars;        
         }
     }
 }
