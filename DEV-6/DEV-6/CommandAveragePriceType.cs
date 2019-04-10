@@ -18,7 +18,7 @@ namespace DEV_6
         {
           foreach(var element in company.cars)
             {
-                if(element.Mark.Equals(Type))
+                if(element.Brand.Equals(Type))
                 {
                     allPrice += element.Price*element.Quantity;
                     countOfCars+=element.Quantity;

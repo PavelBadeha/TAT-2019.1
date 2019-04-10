@@ -9,26 +9,26 @@ namespace DEV_6
         public List<Car> cars;
         private XmlDocument xmlDocument;
         private XmlElement xmlElement;
-        public List<string> allMarks;
+        public List<string> allBrands;
         private string nameOfXml = string.Empty;
         public Company(string nameOfXml)
         {
             cars = new List<Car>();
-            allMarks = new List<string>();
+            allBrands = new List<string>();
             this.nameOfXml = nameOfXml;
             xmlDocument = new XmlDocument();
             xmlDocument.Load(nameOfXml);
             xmlElement = xmlDocument.DocumentElement;
             AddCarsToList();
-            AddMarksToList();
+            AddBrandsToList();
         }
-        public void AddMarksToList()
+        public void AddBrandsToList()
         {
             foreach (XmlElement xnode in xmlElement)
             {
-                if(!allMarks.Contains(xnode.Attributes.GetNamedItem("Mark")?.Value))
+                if(!allBrands.Contains(xnode.Attributes.GetNamedItem("Brand")?.Value))
                 {
-                    allMarks.Add(xnode.Attributes.GetNamedItem("Mark")?.Value);
+                    allBrands.Add(xnode.Attributes.GetNamedItem("Brand")?.Value);
                 }            
             }
         }
@@ -41,7 +41,7 @@ namespace DEV_6
                 {                             
                     foreach (XmlNode node in childnode)
                     {
-                        car.Mark = xnode.Attributes.GetNamedItem("Mark")?.Value;
+                        car.Brand = xnode.Attributes.GetNamedItem("Brand")?.Value;
                         car.Model = childnode.Attributes.GetNamedItem("Model")?.Value;
                         if (node.Name=="Price")
                         {

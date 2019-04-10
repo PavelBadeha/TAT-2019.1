@@ -7,7 +7,6 @@ namespace DEV_6
         static void Main(string[] args)
         {
             Company company = new Company(args[0]);
-            string type = "Opel";
             foreach(var car in company.cars)
             {
                 car.Inform();

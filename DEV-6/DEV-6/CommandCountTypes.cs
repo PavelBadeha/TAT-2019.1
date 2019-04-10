@@ -10,7 +10,7 @@ namespace DEV_6
         }
         public override double Execute()
         {
-            foreach(var el in company.allMarks)
+            foreach(var el in company.allBrands)
             {
                 CountOfTypes++;
             }

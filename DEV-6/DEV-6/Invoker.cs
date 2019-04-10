@@ -11,14 +11,14 @@ namespace DEV_6
         }
         public void checkForValid(ref string type)
         {
-            if (!company.allMarks.Contains(type))
+            if (!company.allBrands.Contains(type))
             {
-                Console.WriteLine("!!!!Not correct Mark!!!!\nMarks that we have");
-                foreach (var typ in company.allMarks)
+                Console.WriteLine("!!!!Not correct Brand!!!!\nBrands that we have");
+                foreach (var typ in company.allBrands)
                 {
                     Console.WriteLine(typ);
                 }
-                Console.WriteLine("Input new Mark");
+                Console.WriteLine("Input new Brand");
                 type = Console.ReadLine();
                 checkForValid(ref type);
             }
@@ -52,7 +52,7 @@ namespace DEV_6
                         choice = Int32.Parse(Console.ReadLine());
                         break;
                     case 4:
-                        Console.WriteLine("Inuput ur Mark");
+                        Console.WriteLine("Inuput ur Brand");
                         string type = Console.ReadLine();
                         checkForValid(ref type);
                         command = new CommandAveragePriceType(company, type);
