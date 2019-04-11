@@ -48,7 +48,7 @@ namespace DEV_6
                         break;
                     case 3:
                         command = new CommandAveragePrice(company);
-                       Console.WriteLine("average car cost: "+command.Execute());
+                        Console.WriteLine("average car cost: " + command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
                     case 4:
@@ -56,7 +56,7 @@ namespace DEV_6
                         string type = Console.ReadLine();
                         checkForValid(ref type);
                         command = new CommandAveragePriceType(company, type);
-                       Console.WriteLine("average price of "+type+" "+command.Execute());
+                        Console.WriteLine("average price of " + type + " " + command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
                     case 0:

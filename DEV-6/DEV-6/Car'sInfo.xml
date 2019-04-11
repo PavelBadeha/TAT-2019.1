@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Cars>
+  <Car Brand="Opel">
+    <Car Model="Vectra">
+      <Price>48</Price>
+      <Quantity>22</Quantity>
+    </Car>  
+  </Car>
+<Car Brand="Opel">   
+    <Car Model="Astra">
+      <Price>52</Price>
+      <Quantity>21</Quantity>
+    </Car>
+  </Car>
+  <Car Brand="Skoda">
+    <Car Model ="N5">
+      <Price>12</Price>
+      <Quantity>40</Quantity>
+    </Car>
+  </Car>
+ <Car Brand="Skoda">
+    <Car Model="N8">
+      <Price>48</Price>
+      <Quantity>22</Quantity>
+    </Car>
+  </Car>
+ <Car Brand="Volvo">
+    <Car Model ="5">
+      <Price>11</Price>
+      <Quantity>4</Quantity>
+    </Car>
+  </Car>
+</Cars>

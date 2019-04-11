@@ -1,7 +1,4 @@
-﻿using System;
-using System.Xml;
-
-namespace DEV_6
+﻿namespace DEV_6
 {
     class CommandAveragePriceType: Command
     {
