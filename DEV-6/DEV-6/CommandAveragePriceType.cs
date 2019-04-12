@@ -4,10 +4,10 @@
     {
         private double allPrice;
         private int countOfCars;
-        private string Type = string.Empty;
-        public CommandAveragePriceType(Company company,string Type) : base(company)
+        private string Brand = string.Empty;
+        public CommandAveragePriceType(Company company,string Brand) : base(company)
         {
-            this.Type = Type;
+            this.Brand = Brand;
             allPrice = 0;
             countOfCars = 0;        
         }
@@ -15,7 +15,7 @@
         {
           foreach(var element in company.cars)
             {
-                if(element.Brand.Equals(Type))
+                if(element.Brand.Equals(Brand))
                 {
                     allPrice += element.Price*element.Quantity;
                     countOfCars+=element.Quantity;

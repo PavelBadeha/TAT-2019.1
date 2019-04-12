@@ -1,26 +1,27 @@
 ﻿using System;
-
+using System.Linq;
 namespace DEV_6
 {
     class Invoker
     {
-        Company company;
+        private Company company;
         public Invoker(Company company)
         {
             this.company = company;
         }
-        public void checkForValid(ref string type)
+        public void checkForValid(ref string brandOfCustom)
         {
-            if (!company.allBrands.Contains(type))
+            if (!company.allBrands.Contains(brandOfCustom))
             {
                 Console.WriteLine("!!!!Not correct Brand!!!!\nBrands that we have");
-                foreach (var typ in company.allBrands)
+                foreach (var brand in company.allBrands.Distinct())
                 {
-                    Console.WriteLine(typ);
+                    Console.WriteLine(brand);
                 }
+                
                 Console.WriteLine("Input new Brand");
-                type = Console.ReadLine();
-                checkForValid(ref type);
+                brandOfCustom = Console.ReadLine();
+                checkForValid(ref brandOfCustom);
             }
         }
         public void Invoke()
@@ -53,10 +54,10 @@ namespace DEV_6
                         break;
                     case 4:
                         Console.WriteLine("Inuput ur Brand");
-                        string type = Console.ReadLine();
-                        checkForValid(ref type);
-                        command = new CommandAveragePriceType(company, type);
-                        Console.WriteLine("average price of " + type + " " + command.Execute());
+                        string brand = Console.ReadLine();
+                        checkForValid(ref brand);
+                        command = new CommandAveragePriceType(company, brand);
+                        Console.WriteLine("average price of " + brand + " " + command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
                     case 0:

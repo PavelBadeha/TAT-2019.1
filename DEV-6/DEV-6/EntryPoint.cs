@@ -6,7 +6,7 @@ namespace DEV_6
     {
         static void Main(string[] args)
         {
-            Company company = new Company(args[0]);
+           Company company = Company.getInstance(args[0]);
             foreach(var car in company.cars)
             {
                 car.Inform();

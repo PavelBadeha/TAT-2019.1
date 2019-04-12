@@ -53,12 +53,15 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Car%27sInfo.xml" />
+    <Content Include="Car%27sInfo2.xml" />
+    <Content Include="TruckInfo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

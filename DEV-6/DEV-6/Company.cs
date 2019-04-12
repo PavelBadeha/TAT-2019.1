@@ -1,60 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml;
+using System.Linq;
+using System.Xml.Linq;
+
 
 namespace DEV_6
 {
     class Company
     {
+        private static Company uniqueInstance;
         public List<Car> cars;
-        private XmlDocument xmlDocument;
-        private XmlElement xmlElement;
         public List<string> allBrands;
         private string nameOfXml = string.Empty;
-        public Company(string nameOfXml)
+        public static Company getInstance(string nameOfXml)
+        {
+            if(uniqueInstance==null)
+            {
+              uniqueInstance = new Company(nameOfXml);
+            }
+            return uniqueInstance;
+        }
+        private Company(string nameOfXml)
         {
             cars = new List<Car>();
             allBrands = new List<string>();
-            this.nameOfXml = nameOfXml;
-            xmlDocument = new XmlDocument();
-            xmlDocument.Load(nameOfXml);
-            xmlElement = xmlDocument.DocumentElement;
+            this.nameOfXml = nameOfXml;    
+            
             AddCarsToList();
             AddBrandsToList();
         }
-        public void AddBrandsToList()
-        {
-            foreach (XmlElement xnode in xmlElement)
-            {
-                if(!allBrands.Contains(xnode.Attributes.GetNamedItem("Brand")?.Value))
-                {
-                    allBrands.Add(xnode.Attributes.GetNamedItem("Brand")?.Value);
-                }            
-            }
-        }
-        public void AddCarsToList()
-        {         
-            foreach (XmlElement xnode in xmlElement)
-            {
-                Car car = new Car();               
-                foreach (XmlNode childnode in xnode)
-                {                             
-                    foreach (XmlNode node in childnode)
-                    {
-                        car.Brand = xnode.Attributes.GetNamedItem("Brand")?.Value;
-                        car.Model = childnode.Attributes.GetNamedItem("Model")?.Value;
-                        if (node.Name=="Price")
-                        {
-                            car.Price = Int32.Parse(node?.InnerText);
-                        }
-                        else
-                        {
-                            car.Quantity = Int32.Parse(node?.InnerText);
-                        }                     
-                    }
-                }
-                cars.Add(car);
-            }
-        }
+       
     }
 }
