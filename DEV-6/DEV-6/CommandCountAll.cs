@@ -29,6 +29,7 @@
             {
                 QuantityOfAll += element.Quantity;
             }
+
             return QuantityOfAll;
         }
     }

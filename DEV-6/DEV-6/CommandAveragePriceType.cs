@@ -38,14 +38,15 @@
         /// <returns>The average price of certain type</returns>
         public override double Execute()
         {
-          foreach(var element in company.cars)
-            {
+            foreach (var element in company.cars) 
+            {           
                 if(element.Brand.Equals(Brand))
                 {
                     allPrice += element.Price*element.Quantity;
                     countOfCars+=element.Quantity;
                 }
             }
+
             return allPrice / countOfCars;        
         }
     }

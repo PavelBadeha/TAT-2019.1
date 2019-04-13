@@ -36,6 +36,7 @@
                 allPrice += element.Price*element.Quantity;
                 countOfAllCars += element.Quantity;
             }
+
             return allPrice/countOfAllCars;
         }
     }

@@ -37,7 +37,7 @@ namespace DEV_6
         }
 
         /// <summary>
-        /// The method that check is there such a brand?
+        /// The method that check is there such a brand
         /// </summary>
         /// <param name="brandOfCustom">The name of custom's brand</param>
         /// <param name="nameOfXml">The name of Xml file</param>
@@ -46,6 +46,7 @@ namespace DEV_6
             if (!Company.getInstance(nameOfXml).allBrands.Contains(brandOfCustom))
             {
                 Console.WriteLine("!!!!Not correct Brand!!!!\nBrands that we have");
+
                 foreach (var brand in Company.getInstance(nameOfXml).allBrands.Distinct())
                 {
                     Console.WriteLine(brand);
@@ -53,6 +54,7 @@ namespace DEV_6
                 
                 Console.WriteLine("Input new Brand");
                 brandOfCustom = Console.ReadLine();
+
                 IsThereSuchBrand(ref brandOfCustom,nameOfXml);
             }
         }
@@ -68,6 +70,7 @@ namespace DEV_6
                     + "average_price car(truck) type -average cost of cars of each brand(the brand is set by the user), for example, average price volvo\n"
                     + "exit\n"
                     +"Input chain of commands than input 'execute'");
+
             while(true)
             {
                 

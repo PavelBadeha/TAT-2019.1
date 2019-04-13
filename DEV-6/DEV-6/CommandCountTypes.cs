@@ -18,6 +18,7 @@ namespace DEV_6
         /// The override method Execute
         /// </summary>
         /// <returns>The count of all brands</returns>
-        public override double Execute() => company.allBrands.Distinct().Count();
+        public override double Execute() => 
+            company.allBrands.Distinct().Count();
     }
 }
