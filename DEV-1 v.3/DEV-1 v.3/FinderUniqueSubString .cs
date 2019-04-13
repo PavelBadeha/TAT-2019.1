@@ -38,22 +38,26 @@ namespace DEV_1
             bool flag = false;
             string buff = string.Concat(str[0]);
             string buff2 = string.Empty;
+            
             for (int i = 1; i < str.Length; i++)
             {
                 if (str[i] != str[i - 1])
                 {
                     buff += str[i];
                 }
+                
                 else
                 {
                     flag = true;
                 }
+                
                 if (flag || (i == str.Length - 1))
                     while (buff.Length >= 2)
                     {
                         for (int k = 0; k < buff.Length; k++)
                         {
                             buff2 += buff[k];
+                            
                             if (buff2.Length >= 2)
                             {
                                 BuffResultString.Append($"{buff2}\n");
