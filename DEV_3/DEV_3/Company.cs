@@ -1,4 +1,3 @@
-﻿using System;
 using System.Collections.Generic;
 
 namespace DEV_3
@@ -50,10 +49,10 @@ namespace DEV_3
         /// <summary>
         /// a method which shows which employees the company is ready to sel
         /// </summary>
-        /// <param name="obj">the object that selects which employees are needed</param>
-        public void GetUrTeam(TeamBuild obj)
+        /// <param name="Team">the object that selects which employees are needed</param>
+        public void GetUrTeam(TeamBuild Team)
         {
-            obj.GetUrTeam();     
+            Team.GetUrTeam();     
         }
 
         /// <summary>
@@ -61,7 +60,7 @@ namespace DEV_3
         /// </summary>
         public void GetEmployees()
         {
-            foreach(var emp in employees)
+            foreach(var emp in this.employees)
             {
                 Console.WriteLine(emp.GetName());
             }
