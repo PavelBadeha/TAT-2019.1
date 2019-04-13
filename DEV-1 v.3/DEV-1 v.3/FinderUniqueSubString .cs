@@ -1,8 +1,10 @@
-﻿using System;
 using System.Text;
 
 namespace DEV_1
 {
+    /// <summary>
+    /// The class that search sub strings
+    /// </summary>
     public class FinderUniqueSubString
     {
         /// <summary>
@@ -10,17 +12,21 @@ namespace DEV_1
         /// <param name="BuffResultSting"></param>buffer StringBuilder that will be contain all unique subsequences
         /// <param name="ResultString"></param> Result string which contain all unique subsequences
         /// </summary>
-
         private string str = string.Empty;
         private StringBuilder BuffResultString = new StringBuilder(string.Empty);
         private string ResultString = string.Empty;
 
+        /// <summary>
+        /// The constructor
+        /// </summary>
+        /// <param name="_str">Ыtring in which the substrings are searched</param>
         public FinderUniqueSubString(string _str)
         {
             str = _str;
         }
+        
         /// <summary>
-        /// Method that SearchSubString
+        /// Method that search sub string
         /// </summary>
         public void SearchSubString()
         {
@@ -59,14 +65,6 @@ namespace DEV_1
                 flag = false;
             }
             ResultString = BuffResultString.ToString();
-        }
-        /// <summary>
-        /// Method that displays Result string
-        /// </summary>
-        public void PrintUniqueSequence()
-        {
-            Console.WriteLine($"Source word: {str}");
-            Console.WriteLine(ResultString);
-        }
+        }       
     }
 }
