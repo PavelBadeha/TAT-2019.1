@@ -38,7 +38,7 @@ namespace DEV_3
         /// <summary>
         /// the constructor that create object of Employees
         /// </summary>
-        public TeamBuild()
+        public TeamBuilder()
         {
             junior = new Junior();
             middle = new Middle();
@@ -55,7 +55,7 @@ namespace DEV_3
         /// <summary>
         /// display team for a customer
         /// </summary>
-        public void  GetUrTeam()
+        public void  PrintUrTeam()
         {
             Console.WriteLine("Your Team :");
             Console.WriteLine($"{urTeamLeads} Leads\n{urTeamSeniors} Seniors\n{urTeamMiddles} Middles\n{urTeamJuniors} Juniors");
