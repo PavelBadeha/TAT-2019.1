@@ -14,25 +14,28 @@ namespace DEV_3
             try
             {
                 string Choice = string.Empty;
-                TeamBuild obj;
+                TeamBuilder team;
                 Company company = new Company();
                 Console.WriteLine("Choose ur criteria: 1st,2nd,3rd");
                 Choice = Console.ReadLine();
                 switch(Choice)
                 {
                     case "1st":
-                        obj = new TeamBuild1stCriterion();
+                        team = new TeamBuildFirstCriterion();
+                        team.Colculate();
                         break;
                     case "2nd":
-                        obj = new TeamBuild2ndCriterion();
+                        team = new TeamBuilderSecondCriterion();
+                        team.Colculate();
                         break;
                     case "3rd":
-                        obj = new TeamBuild3rdCriterion();
+                        team = new TeamBuildThirdCriterion();
+                        team.Colculate();
                         break;
                     default:
                         throw new FormatException();
                 }                                      
-                company.GetUrTeam(obj);
+                company.PrintUrTeam(team);
             }
             catch(FormatException)
             {
