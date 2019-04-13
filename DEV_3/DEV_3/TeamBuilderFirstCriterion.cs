@@ -6,12 +6,12 @@ namespace DEV_3
     /// Class of first criterion
     ///first criterion is maximum productivity within the sum
     /// </summary>
-    class TeamBuildFirstCriterion :TeamBuilder
+    class TeamBuilderFirstCriterion :TeamBuilder
     {
         /// <summary>
         /// the constructor of class
         /// </summary>
-        public TeamBuildFirstCriterion()
+        public TeamBuilderFirstCriterion()
         {        
             Console.WriteLine("Input amount");
             Amount = Int32.Parse(Console.ReadLine());
