@@ -21,15 +21,15 @@ namespace DEV_3
                 switch(Choice)
                 {
                     case "1st":
-                        team = new TeamBuildFirstCriterion();
+                        team = new TeamBuilderFirstCriterion();
                         team.Colculate();
                         break;
                     case "2nd":
-                        team = new TeamBuilderSecondCriterion();
+                        team = new TeamBuildererSecondCriterion();
                         team.Colculate();
                         break;
                     case "3rd":
-                        team = new TeamBuildThirdCriterion();
+                        team = new TeamBuilderThirdCriterion();
                         team.Colculate();
                         break;
                     default:
