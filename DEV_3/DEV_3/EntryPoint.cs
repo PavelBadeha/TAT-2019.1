@@ -1,33 +1,32 @@
-﻿using System;
 namespace DEV_3
 {
     /// <summary>
     /// Entry point of program.
+    /// optimize staff using one of the 3 criteria
     /// </summary>
     class EntryPoint
     {
         /// <summary>
-        /// The main method
+        /// Entry point to the program
         /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
-                int Choice = 0;
+                string Choice = string.Empty;
                 TeamBuild obj;
                 Company company = new Company();
                 Console.WriteLine("Choose ur criteria: 1st,2nd,3rd");
-                Choice= Int32.Parse(Console.ReadLine());
+                Choice = Console.ReadLine();
                 switch(Choice)
                 {
-                    case (1):
+                    case "1st":
                         obj = new TeamBuild1stCriterion();
                         break;
-                    case (2):
+                    case "2nd":
                         obj = new TeamBuild2ndCriterion();
                         break;
-                    case (3):
+                    case "3rd":
                         obj = new TeamBuild3rdCriterion();
                         break;
                     default:
