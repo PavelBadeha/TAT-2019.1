@@ -2,8 +2,15 @@
 
 namespace DEV_2
 {
+    /// <summary>
+    ///The main class of the program    
+    /// </summary>
     class EntryPoint
     {
+        /// <summary>
+        /// The entry point.
+        /// <param name="args">String from command line</param>
+        /// </summary>
         static void Main(string[] args)
         {
             try
@@ -14,20 +21,20 @@ namespace DEV_2
                 {
                     throw new ArgumentNullException();
                 }
-                var obj = new MakeTranscription(str);
-                obj.ValidationCheck();
-                obj.Transcriptor();
-                obj.DisplayResult();
+                var transcription = new MakeTranscription(str);
+                transcription.ValidationCheck();
+                transcription.Transcriptor();
+                transcription.DisplayResult();
 
-            }
+            }          
             catch (ArgumentNullException)
             {
                 Console.WriteLine("Empty or less than 2 symbols!");
-            }
+            }        
             catch (FormatException)
             {
                 Console.WriteLine("Missing pointer to stressed letter!");
-            }
+            }            
             catch (Exception)
             {
                 Console.WriteLine("Error!");
