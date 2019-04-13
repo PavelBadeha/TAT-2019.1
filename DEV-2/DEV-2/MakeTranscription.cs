@@ -1,7 +1,5 @@
-﻿using System;
 using System.Linq;
 using System.Text;
-
 
 namespace DEV_2
 {
@@ -51,18 +49,15 @@ namespace DEV_2
                 {
                     throw new FormatException();
                 }
-            }
-            
-
+            }           
         }
+        
         /// <summary>
         /// StressedLetter unstressed 'о' goes into 'a'
         /// </summary>
         public string StressedLetter()
-        {
-          
-            return "a";
-                               
+        {         
+           return "a";                               
         }
 
         /// <summary>
@@ -75,11 +70,11 @@ namespace DEV_2
             return Letter;
             
         }
+        
         /// <summary>
         ///The vowels "ю", "я", "е", "ё" at the beginning of the word, 
         ///after other vowels and after "ь", "ъ" are converted into "йю", "йа", "йо", "йэ"
-        /// </summary>
-       
+        /// </summary>     
         public string MakeSoftYote(string Letter)
         {
             int index = Yote.IndexOf(Letter);
@@ -87,17 +82,16 @@ namespace DEV_2
             return Letter;
           
         }
+        
         /// <summary>
         /// The voicing / stunning of consonants is a ringing vowel after the deaf and 
         /// at the end of the word becomes deaf, and the deaf before the voiced-voiced
-        /// </summary>
-        
+        /// </summary>    
         public string VoicedToDeaf(string Letter)
         {
             int index = VoicedConsonants.IndexOf(Letter);
             Letter = DeafConsonants[index].ToString();
-            return Letter;
-        
+            return Letter;     
         }
         public string DeafToVoiced(string Letter)
         {
@@ -105,27 +99,28 @@ namespace DEV_2
             Letter = VoicedConsonants[index].ToString();
             return Letter;         
         }
+        
         /// <summary>
         /// softening of consonants
         /// </summary>
-
         public string HardToSoft(string Letter)
         {
             return Letter + "'";
            
         }
+        
         /// <summary>
         /// monitors outside arrays
         /// </summary>
-
         public bool CheckOutOfRange(int i)
         {
             return (i + 1 < str.Length);
         }
+        
         /// <summary>
         /// Method that conatins all rule
         /// </summary>
-        public void Transcriptor()
+        public void MakeTranscription()
         {
             for (int i = 0; i < str.Length; i++)
             {
