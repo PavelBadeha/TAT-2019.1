@@ -2,27 +2,50 @@
 
 namespace DEV_6
 {
+    /// <summary>
+    /// The commands invoker.
+    /// </summary>
     class Invoker
     {
-        Company company;
+        /// <summary>
+        ///The receiver of all commands
+        /// </summary>
+        private Company company;
+
+        /// <summary>
+        /// The constructor
+        /// </summary>
+        /// <param name="company">The receiver</param>  
         public Invoker(Company company)
         {
             this.company = company;
         }
-        public void checkForValid(ref string type)
+
+        /// <summary>
+        /// The method that check is there such a brand
+        /// </summary>
+        /// <param name="type">The name of custom's brand</param>
+        public void IsThereSuchBrand(ref string type)
         {
             if (!company.allBrands.Contains(type))
             {
                 Console.WriteLine("!!!!Not correct Brand!!!!\nBrands that we have");
+
                 foreach (var typ in company.allBrands)
                 {
                     Console.WriteLine(typ);
                 }
+
                 Console.WriteLine("Input new Brand");
                 type = Console.ReadLine();
-                checkForValid(ref type);
+
+                IsThereSuchBrand(ref type);
             }
         }
+
+        /// <summary>
+        /// Invokes the commands
+        /// </summary>
         public void Invoke()
         {
             Command command;
@@ -32,6 +55,7 @@ namespace DEV_6
                     + "average price type(4) -average cost of cars of each brand(the brand is set by the user), for example, average price volvo\n"
                     + "exit(0)");
             int choice = Int32.Parse(Console.ReadLine());
+
             while (true)
             {
                 switch (choice)
@@ -41,27 +65,33 @@ namespace DEV_6
                         Console.WriteLine("number of car brands: "+command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
+
                     case 2:
                         command = new CommandCountAll(company);
                         Console.WriteLine("total number of cars: "+command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
+
                     case 3:
                         command = new CommandAveragePrice(company);
                         Console.WriteLine("average car cost: " + command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
+
                     case 4:
                         Console.WriteLine("Inuput ur Brand");
                         string type = Console.ReadLine();
-                        checkForValid(ref type);
+                        IsThereSuchBrand(ref type);
+
                         command = new CommandAveragePriceType(company, type);
                         Console.WriteLine("average price of " + type + " " + command.Execute());
                         choice = Int32.Parse(Console.ReadLine());
                         break;
+
                     case 0:
                         Environment.Exit(0);
                         break;
+
                     default:
                         Console.WriteLine("Choose number from 0-4 pls");
                         choice = Int32.Parse(Console.ReadLine());
