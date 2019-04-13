@@ -6,12 +6,12 @@ namespace DEV_3
     /// Class of first criterion
     ///first criterion is maximum productivity within the sum
     /// </summary>
-    class TeamBuild1stCriterion :TeamBuild
+    class TeamBuildFirstCriterion :TeamBuilder
     {
         /// <summary>
         /// the constructor of class
         /// </summary>
-        public TeamBuild1stCriterion()
+        public TeamBuildFirstCriterion()
         {        
             Console.WriteLine("Input amount");
             Amount = Int32.Parse(Console.ReadLine());
@@ -19,9 +19,9 @@ namespace DEV_3
             if (Amount <= junior.Cost)
             {
                 Console.WriteLine("Not enough money");
-            }
-            Colculate();        
+            }               
         }
+        
         public override void Colculate()
         {
             int i = 0;
