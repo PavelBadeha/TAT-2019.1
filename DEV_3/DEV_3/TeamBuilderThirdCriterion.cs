@@ -6,12 +6,12 @@ namespace DEV_3
     /// Class of third criterion
     ///Third criterion minimum number of staff qualifications above Junior for fixed productivity
     /// </summary>
-    class TeamBuild3rdCriterion :TeamBuild
+    class TeamBuilderThirdCriterion :TeamBuilder
     {
         /// <summary>
         /// the constructor of class
         /// </summary>
-        public TeamBuild3rdCriterion()
+        public TeamBuilderThirdCriterion()
         {
             Console.WriteLine("Input productivity");
             NeedProductivity = Int32.Parse(Console.ReadLine());
@@ -19,8 +19,7 @@ namespace DEV_3
             if (NeedProductivity <= middle.Productivity)
             {
                 Console.WriteLine("Not correct input!");
-            }
-            Colculate();
+            }          
         }
         public override void Colculate()
         {
