@@ -23,7 +23,7 @@ namespace DEV_2
                 }
                 var transcription = new MakeTranscription(str);
                 transcription.ValidationCheck();
-                transcription.Transcriptor();
+                transcription.MakeTranscription();
                 transcription.DisplayResult();
 
             }          
