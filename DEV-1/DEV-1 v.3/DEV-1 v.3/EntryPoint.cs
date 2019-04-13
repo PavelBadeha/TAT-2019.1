@@ -35,20 +35,22 @@ namespace DEV_1
                     }
 
                     FinderUniqueSubString UniqueSequence = new FinderUniqueSubString(str);
-                    UniqueSequence.SearchSubString();
-                    UniqueSequence.PrintUniqueSequence();
+                    UniqueSequence.SearchSubString(); 
                 }
 
             }
+
             catch (ArgumentNullException)
             {
                 Console.WriteLine("Empty string");
             }
+
             catch (FormatException)
             {
                 Console.WriteLine($"Word caused format exception: {args[ErrorIndex]}");
                 Console.WriteLine("Less than 2 symbols");
             }
+
             catch (Exception)
             {
                 Console.WriteLine("Unknown error");

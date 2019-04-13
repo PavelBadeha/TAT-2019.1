@@ -1,10 +1,9 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace DEV_1
 {
     /// <summary>
-    /// The class thath search sub strings
+    /// The class that search sub strings
     /// </summary>
     public class FinderUniqueSubString
     {
@@ -13,7 +12,6 @@ namespace DEV_1
         /// <param name="BuffResultSting"></param>buffer StringBuilder that will be contain all unique subsequences
         /// <param name="ResultString"></param> Result string which contain all unique subsequences
         /// </summary>
-
         private string str = string.Empty;
         private StringBuilder BuffResultString = new StringBuilder(string.Empty);
         private string ResultString = string.Empty;
@@ -26,8 +24,9 @@ namespace DEV_1
         {
             str = _str;
         }
+
         /// <summary>
-        ///The method that Search substrings
+        ///The method that search substrings
         /// </summary>
         public void SearchSubString()
         {
