@@ -25,6 +25,7 @@ namespace DEV_1
                 {
                     throw new ArgumentNullException();
                 }
+
                 for (int i = 0; i < args.Length; i++)
                 {
                     string str = args[i];

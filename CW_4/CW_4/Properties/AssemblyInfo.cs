@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("DEV-1 v.3")]
+[assembly: AssemblyTitle("CW_4")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("DEV-1 v.3")]
+[assembly: AssemblyProduct("CW_4")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("00f78f1d-e6c6-4400-82f0-ef2495174eeb")]
+[assembly: Guid("2803d4a5-66c5-4b14-8e45-ec2ef2c632dd")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
