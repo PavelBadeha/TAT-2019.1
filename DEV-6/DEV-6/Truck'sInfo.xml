@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cars>
+  <Car>
+    <Brand>Maz</Brand>
+    <Model>5</Model>
+        <Price>70</Price>
+        <Quantity>22</Quantity>
+  </Car>
+  <Car>
+    <Brand>Vaz</Brand>
+    <Model>1</Model>
+    <Price>102</Price>
+    <Quantity>21</Quantity>
+  </Car> 
+</Cars>
